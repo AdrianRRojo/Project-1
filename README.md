@@ -18,13 +18,13 @@ Both the Player and the computer will have 5 turns, the winner is decided on who
 
 
 
-#Stretch Goals
+# Stretch Goals
 ---
 1. The cards could send visual attacks(Like a fireball) to the enemy card
 2. Each card have its own character that has a visual made for it
 3. Each battle will have its own background
 
-#Wireframe
+# Wireframe
 ---
-![Screen Shot 2022-08-19 at 11 12 55 AM](https://user-images.githubusercontent.com/108231637/185661945-bce14652-a4dc-4dd5-9665-9c8ad67798d7.png)
+![WireFrame](https://user-images.githubusercontent.com/108231637/185661945-bce14652-a4dc-4dd5-9665-9c8ad67798d7.png)
 
