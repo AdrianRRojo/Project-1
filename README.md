@@ -2,6 +2,7 @@
 
 
 # Duel or no Duel 
+### get it like deal or no deal? 
 ---
 # About the Game
 ---
