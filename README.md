@@ -24,5 +24,6 @@ Both the Player and the computer will have 5 turns, the winner is decided on who
 2. Each card have its own character that has a visual made for it
 3. Each battle will have its own background
 
-
-!![Screen Shot 2022-08-19 at 11 10 50 AM](https://user-images.githubusercontent.com/108231637/185661615-df211a5d-d73f-404d-93e7-a77cb67fb84a.png)
+#Wireframe
+---
+![Screen Shot 2022-08-19 at 11 10 50 AM](https://user-images.githubusercontent.com/108231637/185661615-df211a5d-d73f-404d-93e7-a77cb67fb84a.png)
