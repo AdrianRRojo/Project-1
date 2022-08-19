@@ -61,6 +61,7 @@ html,body {
   
   #btm-right {
     grid-area: btm-right;
+    height: 7vh;
     /* background-color: #222; */
   }
 
@@ -68,4 +69,31 @@ html,body {
     position: relative;
     right: 35vw;
     bottom: 50vh;
+}
+
+
+#cardOne{
+  position: absolute;
+  bottom: 40vh;
+  left: 28vw;
+}
+#cardTwo{
+  position: absolute;
+  bottom: 40vh;
+  left: 38vw;
+}
+#cardThree{
+  position: absolute;
+  bottom: 40vh;
+  left: 48vw;
+}
+#cardFour{
+  position: absolute;
+  bottom: 40vh;
+  left: 58vw;
+}
+#cardFive{
+  position: absolute;
+  bottom: 40vh;
+  left: 68vw;
 }
