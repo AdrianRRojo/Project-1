@@ -26,4 +26,5 @@ Both the Player and the computer will have 5 turns, the winner is decided on who
 
 #Wireframe
 ---
-![Screen Shot 2022-08-19 at 11 10 50 AM](https://user-images.githubusercontent.com/108231637/185661615-df211a5d-d73f-404d-93e7-a77cb67fb84a.png)
+![Screen Shot 2022-08-19 at 11 12 55 AM](https://user-images.githubusercontent.com/108231637/185661945-bce14652-a4dc-4dd5-9665-9c8ad67798d7.png)
+
