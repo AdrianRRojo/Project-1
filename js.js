@@ -19,6 +19,11 @@ class Cards{
     }
 }
 
-const wizard = new Cards(15, "wizard", "magic", 'blue')
-// console.log(wizard) -- checked to see if card was made.
+const wizard = new Cards(Math.random() *  50, "Wizard", "magic", 'blue')
 wizard.render(150,260,110,150)
+const knight = new Cards(Math.random() *  50, "Knight", "Melee",'red')
+
+const dragon = new Cards(Math.random() *  50, "Dragon", "Magin",'hotpink')
+
+const dwarf = new Cards (Math.random ()* 50, "Dwarf", "Melee","orange")
+console.log(dragon, dwarf, knight, wizard)
