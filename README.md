@@ -15,3 +15,11 @@ Both the Player and the computer will have 5 turns, the winner is decided on who
 2. Winner and Loser
 3. Will use CSS JS & HTML
 4.Instructions will be listed on the side of the screen
+
+
+
+#Stretch Goals
+---
+1. The cards could send visual attacks(Like a fireball) to the enemy card
+2. Each card have its own character that has a visual made for it
+3. Each battle will have its own background
