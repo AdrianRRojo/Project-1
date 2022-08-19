@@ -15,7 +15,7 @@ Both the Player and the computer will have 5 turns, the winner is decided on who
 2. Winner and Loser
 3. Will use CSS JS & HTML
 4. Instructions will be listed on the side of the screen
-5. PvE
+5. PvE - The player will be playing against the computer.
 
 
 
