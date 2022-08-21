@@ -47,33 +47,83 @@ function getRandomInt(max) {
     return Math.floor(Math.random() * max);
   }
 
-
+  function getRandomInt2(max) {
+    return Math.floor(Math.random() * max);
+  }
 // card factory --- make different styles of cards with varying levels
 const wizard = new Cards(getRandomInt(25), "Wizard", "Magic", 'blue',"card")
-//if(wizard.alive === true){
     wizard.render(150,260,110,150)
-//}else {
-    //wizard.render()
-//}
 const knight = new Cards(getRandomInt(25), "Knight", "Melee",'darkgray',"card")
-knight.render(250,260,110,150)
+    knight.render(250,260,110,150)
 const dragon = new Cards(getRandomInt(25), "Dragon", "Magic",'crimson',"card")
-dragon.render(350,260,110,150)
+    dragon.render(350,260,110,150)
 const dwarf = new Cards (getRandomInt(25), "Dwarf", "Melee", 'orange',"card")
-dwarf.render(450,260,110,150)
+    dwarf.render(450,260,110,150)
 const hobbit = new Cards (getRandomInt(25), "Hobbit", "Magic", 'BurlyWood', "card")
-hobbit.render(550,260,110,150)
+    hobbit.render(550,260,110,150)
 console.log(dragon, dwarf, knight, wizard, hobbit) //checking to see if all cards are made
 
 
-// What do I want to happen:
-/*
-when button is pushed the card is relocated to the left side of the canvas 
-he AI will place a card at random on the right side of the cavnas
-the card with the higher level will be placed in the middle 
-the winner will be scored on the right
+
+/*Idea
+Create a seperate constructor for the AI
+of "Monsters" and have those fight amongst the Heros.
 */
 
+let monsters = [
+    'linch',
+    'FrostGiant',
+    'FireFox',
+    'TheSwarm',
+    'Alien',
+    'Bear'
+]
+let monsterName = monsters[Math.floor(Math.random() * monsters.length)]
+
+const lich = new Cards(getRandomInt(25), "Lich", "Magic", 'purple', "card")
+const frostGiant = new Cards(getRandomInt(25), "FrostGiant", "Magic", 'blue', "card")
+const fireFox = new Cards(getRandomInt(25), "fireFox", "Melee", 'crimson', "card")
+const theSwarm = new Cards(getRandomInt(25), "theSwarm", "Melee", 'black', "card")
+const Alien = new Cards(getRandomInt(25), "Alien", "Magic", 'green', "card")
+const Bear = new Cards(getRandomInt(25), "Lich", "Magic", 'brown', "card")
+const Rat = new Cards(getRandomInt(5), "Rat", "Melee", 'goldenRod', "card")
+
+
+let monstersLvls = getRandomInt2(25)
+let thislvl = getRandomInt(25)
+
+if(this.lvl > monstersLvls){
+    console('you won'  + thislvl + " hero level "+ "monster " + monstersLvls )
+}else if (this.lvl < monstersLvls){
+    console('you lost'  + thislvl + " hero level "+ "monster lvl" + monstersLvls )
+}else{
+    console.log('tie ' + thislvl + " hero level "+ "monster lvl" + monstersLvls )
+}
+
+// .render(550,100,90,120)
+
+let playerCounter = 0
+let AICounter = 0
+const winner = function(){
+    let monstersLvls = getRandomInt2(25)
+    let thislvl = getRandomInt(25)
+    if (monstersLvls > thislvl){
+        turn = 1;
+        AICounter++
+        console.log("You lose! " + monstersLvls + "<- monster hero -> " + thislvl)
+        console.log(AICounter + "<- AICounter PlayerCounter ->" + playerCounter)
+        console.log()
+    }else if(thislvl> monstersLvls){
+        turn = 1;
+        playerCounter++ 
+        console.log("You Win!" + monstersLvls + " " + thislvl)
+        console.log(AICounter + "<- AICounter PlayerCounter ->" + playerCounter)
+    }else if(thislvl === monstersLvls){
+        turn = 1;
+        ("TIE"+ monstersLvls+ " " + thislvl)
+        console.log(AICounter + "<- AICounter PlayerCounter ->" + playerCounter)
+    }
+}
 
 turn = 1;
 function playFunc(){
@@ -81,150 +131,145 @@ function playFunc(){
         wizard.render(150,100,90,120)
         cardOne.disabled = true
         turn = 0;
-        //wizard.alive = false
     }
     if(turn === 0){
-        let AIrandom = getRandomInt(5)
-        if(AIrandom === 1){
-            wizard.render(550,100,90,120)
-        }else if(AIrandom === 2){
-            knight.render(550,100,90,120)
-        }else if(AIrandom === 3){
-            dragon.render(550,100,90,120)
-        }else if(AIrandom === 4){
-            dwarf.render(550,100,90,120)
-        }else if(AIrandom === 5){
-            hobbit.render(550,100,90,120)
+        if(monsterName === "Lich"){
+            lich.render(550,100,90,120)
+           winner()
+        }else if(monsterName === "FrostGiant"){
+             frostGiant.render(550,100,90,120)
+            winner()
+        }else if(monsterName === "FireFox"){
+            fireFox.render(550,100,90,120)
+           winner()
+        }else if(monsterName === "TheSwarm"){
+            theSwarm.render(550,100,90,120)
+           winner()
+        }else if(monsterName === "Alien"){
+            Alien.render(550,100,90,120)
+           winner()
+        }else if(monsterName === "Bear"){
+            Bear.render(550,100,90,120)
+           winner()
         }
-        turn = 1;
-        if(AIrandom > wizard.lvl){
-            console.log("PC WON")
-        }else if (wizard.lvl > AIrandom){
-            console.log('YOU WIN')
-        }else{
-            console.log("TIE")
-        }
+  }     
+ }
+ function playFunc2(){
+    if(turn === 1){
+        knight.render(150,100,90,120)
+        cardTwo.disabled = true
+        turn = 0;
     }
-}
-function playFunc2(){
-  if(turn === 1){
-      knight.render(150,100,90,120)
-      cardTwo.disabled = true
-      turn = 0;
-            //wizard.alive = false
-}
-    if(turn === 0){
-      let AIrandom = getRandomInt(5)
-      if(AIrandom === 1){
-         wizard.render(550,100,90,120)
-        }else if(AIrandom === 2){
-            knight.render(550,100,90,120)
-        }else if(AIrandom === 3){
-            dragon.render(550,100,90,120)
-         }else if(AIrandom === 4){
-            dwarf.render(550,100,90,120)
-         }else if(AIrandom === 5){
-            hobbit.render(550,100,90,120)
-     }
-        turn = 1;
-        if(AIrandom > knight.lvl){
-            console.log("PC WON")
-        }else if (wizard.lvl > AIrandom){
-            console.log('YOU WIN')
-        }else{
-            console.log("TIE")
-        }
-    }
-  }
-  function playFunc3(){
+        if(turn === 0){
+            if(monsterName === "Lich"){
+                lich.render(550,100,90,120)
+                winner()
+            }else if(monsterName === "FrostGiant"){
+                frostGiant.render(550,100,90,120)
+                winner()
+            }else if(monsterName === "FireFox"){
+                fireFox.render(550,100,90,120)
+               winner()
+            }else if(monsterName === "TheSwarm"){
+                theSwarm.render(550,100,90,120)
+                winner()
+            }else if(monsterName === "Alien"){
+                Alien.render(550,100,90,120)
+               winner()
+            }else if(monsterName === "Bear"){
+                Bear.render(550,100,90,120)
+               winner()
+                }
+            }
+      }     
+
+
+ function playFunc3(){
     if(turn === 1){
         dragon.render(150,100,90,120)
         cardThree.disabled = true
         turn = 0;
-              //wizard.alive = false
-  }
-      if(turn === 0){
-        let AIrandom = getRandomInt(5)
-        if(AIrandom === 1){
-           wizard.render(550,100,90,120)
-          }else if(AIrandom === 2){
-              knight.render(550,100,90,120)
-          }else if(AIrandom === 3){
-              dragon.render(550,100,90,120)
-           }else if(AIrandom === 4){
-              dwarf.render(550,100,90,120)
-           }else if(AIrandom === 5){
-              hobbit.render(550,100,90,120)
-       }
-          turn = 1;
-          if(AIrandom > dragon.lvl){
-              console.log("PC WON")
-          }else if (dragon.lvl > AIrandom){
-              console.log('YOU WIN')
-          }else{
-              console.log("TIE")
-          }
-      }
     }
-    function playFunc4(){
-        if(turn === 1){
-            dwarf.render(150,100,90,120)
-            cardFour.disabled = true
-            turn = 0;
-                  //wizard.alive = false
-      }
-          if(turn === 0){
-            let AIrandom = getRandomInt(5)
-
-            if(AIrandom === 1){
-               wizard.render(550,100,90,120)
-              }else if(AIrandom === 2){
-                  dwarf.render(550,100,90,120)
-              }else if(AIrandom === 3){
-                  dragon.render(550,100,90,120)
-               }else if(AIrandom === 4){
-                  dwarf.render(550,100,90,120)
-               }else if(AIrandom === 5){
-                  hobbit.render(550,100,90,120)
-           }
-              turn = 1;
-              if(AIrandom > dwarf.lvl){
-                  console.log("PC WON")
-              }else if (dwarf.lvl > AIrandom){
-                  console.log('YOU WIN')
-              }else{
-                  console.log("TIE")
-              }
-          }
-        }
-        function playFunc5(){
-            if(turn === 1){
-                hobbit.render(150,100,90,120)
-                cardFive.disabled = true
-                turn = 0;
-                      //wizard.alive = false
-          }
-              if(turn === 0){
-                let AIrandom = getRandomInt(5)
-                if(AIrandom === 1){
-                   wizard.render(550,100,90,120)
-                  }else if(AIrandom === 2){
-                      knight.render(550,100,90,120)
-                  }else if(AIrandom === 3){
-                      dragon.render(550,100,90,120)
-                   }else if(AIrandom === 4){
-                      dwarf.render(550,100,90,120)
-                   }else if(AIrandom === 5){
-                      hobbit.render(550,100,90,120)
-               }
-                  turn = 1;
-                  if(AIrandom > hobbit.lvl){
-                      console.log("PC WON")
-                  }else if (hobbit.lvl > AIrandom){
-                      console.log('YOU WIN')
-                  }else{
-                      console.log("TIE")
-                  }
-              }
+    if(turn === 0){
+        if(turn === 0){
+            if(monsterName === "Lich"){
+                lich.render(550,100,90,120)
+                winner()
+            }else if(monsterName === "FrostGiant"){
+                frostGiant.render(550,100,90,120)
+                winner()
+            }else if(monsterName === "FireFox"){
+                fireFox.render(550,100,90,120)
+                winner()
+            }else if(monsterName === "TheSwarm"){
+                theSwarm.render(550,100,90,120)
+                winner()
+            }else if(monsterName === "Alien"){
+                Alien.render(550,100,90,120)
+                winner()
+            }else if(monsterName === "Bear"){
+                Bear.render(550,100,90,120)
+                winner()
             }
-          
+      }     
+     } 
+ }
+ function playFunc4(){
+    if(turn === 1){
+        dwarf.render(150,100,90,120)
+        cardFour.disabled = true
+        turn = 0;
+    }
+        if(turn === 0){
+            if(monsterName === "Lich"){
+                lich.render(550,100,90,120)
+                winner()
+            }else if(monsterName === "FrostGiant"){
+                frostGiant.render(550,100,90,120)
+              winner()
+            }else if(monsterName === "FireFox"){
+                fireFox.render(550,100,90,120)
+                winner()
+            }else if(monsterName === "TheSwarm"){
+                theSwarm.render(550,100,90,120)
+                winner()
+            }else if(monsterName === "Alien"){
+                Alien.render(550,100,90,120)
+                winner()
+            }else if(monsterName === "Bear"){
+                Bear.render(550,100,90,120)
+                winner()
+            }
+      }     
+     }
+ function playFunc5(){
+    if(turn === 1){
+        hobbit.render(150,100,90,120)
+        cardFive.disabled = true
+        turn = 0;
+        let thislvl = getRandomInt()
+    }
+    if(turn === 0){
+        let monstersLvls = getRandomInt2(25)
+        if(monsterName === "Lich"){
+            lich.render(550,100,90,120)
+            winner()
+        }else if(monsterName === "FrostGiant"){
+            frostGiant.render(550,100,90,120)
+           winner()
+        }else if(monsterName === "FireFox"){
+            fireFox.render(550,100,90,120)
+           winner()
+        }else if(monsterName === "TheSwarm"){
+            theSwarm.render(550,100,90,120)
+           winner()
+        }else if(monsterName === "Alien"){
+            Alien.render(550,100,90,120)
+           winner()
+            turn = 1;
+        }else if(monsterName === "Bear"){
+            Bear.render(550,100,90,120)
+           winner()
+        }
+  }     
+ }
