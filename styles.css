@@ -113,3 +113,18 @@ html,body {
   bottom: 23%;
   right:48%
 }
+/* #kingDuke{
+  position: absolute;
+  left: 32.3vw;
+  bottom: 42.8vh;
+  height: 16.3%;
+  width: 7.2%;
+ } */
+
+#kingDuke{
+ position: absolute;
+ left: 32.3vw;
+ bottom: 62.8vh;
+ height: 14.3%;
+ width: 7.2%;
+}

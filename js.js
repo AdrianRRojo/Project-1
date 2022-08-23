@@ -13,6 +13,10 @@ make the cards move and shoot projectiles at each other
 add gifs to proctiles 
 
 */
+
+
+
+
 const canvas = document.querySelector('canvas')
 const cardOne = document.querySelector('#cardOne')
 const cardTwo = document.querySelector('#cardTwo')
@@ -21,10 +25,21 @@ const cardFour = document.querySelector('#cardFour')
 const cardFive = document.querySelector('#cardFive')
 const playerBoard = document.querySelector('#playerCounter')
 const aiBoard = document.querySelector('#aiCounter')
+var img;
+// const kingDuke = document.getElementById('kingDuke')
 
 const ctx = canvas.getContext('2d')
 canvas.setAttribute('height', getComputedStyle(canvas)['height'])
 canvas.setAttribute('width', getComputedStyle(canvas)['width'])
+
+function preload(){
+img = loadImage("Hero Cards/KingDuke.png")
+}
+
+
+
+
+
 
 
 class Cards{
@@ -37,7 +52,7 @@ class Cards{
         this.color = color
         this.className = className
     }
-    render(x,y,w,h){
+   render(x,y,w,h){
         ctx.fillStyle = this.color
         ctx.fillRect(x,y,w,h)
     
@@ -51,9 +66,10 @@ function getRandomInt(max) {
   function getRandomInt2(max) {
     return Math.floor(Math.random() * max);
   }
+  
 // card factory --- make different styles of cards with varying levels
-const wizard = new Cards(getRandomInt(25), "Wizard", "Magic", 'blue',"card")
-    wizard.render(150,260,110,150)
+const duke = new Cards(getRandomInt(25), "KingDuke", "Melee", 'blue',"card")
+    duke.render(150,260,110,150)
 const knight = new Cards(getRandomInt(25), "Knight", "Melee",'darkgray',"card")
     knight.render(250,260,110,150)
 const dragon = new Cards(getRandomInt(25), "Dragon", "Magic",'crimson',"card")
@@ -62,7 +78,7 @@ const dwarf = new Cards (getRandomInt(25), "Dwarf", "Melee", 'orange',"card")
     dwarf.render(450,260,110,150)
 const hobbit = new Cards (getRandomInt(25), "Hobbit", "Magic", 'BurlyWood', "card")
     hobbit.render(550,260,110,150)
-console.log(dragon, dwarf, knight, wizard, hobbit) //checking to see if all cards are made
+console.log(dragon, dwarf, knight, duke, hobbit) //checking to see if all cards are made
 
 
 
@@ -127,7 +143,7 @@ const winner = function(){
 
     }else if(thislvl = monstersLvls){
         turn = 1;
-        ("TIE"+ thislvl+  " <- hero monster -> " + monstersLvls)
+        ("TIE"+ thislvl +  " <- hero monster -> " + monstersLvls)
         console.log(AICounter + "<- AICounter PlayerCounter ->" + playerCounter)
          thisWinner = 3
          aiBoard.innerText = "Computer: " + AICounter
@@ -138,7 +154,7 @@ const winner = function(){
 turn = 1;
 function playFunc(){
     if(turn === 1){
-        wizard.render(150,100,90,120)
+        duke.render(150,100,90,120)
         cardOne.disabled = true
         turn = 0;
     }
@@ -150,7 +166,7 @@ function playFunc(){
            if(thisWinner === 1){
             lich.render(350, 100, 90,120)
            }else if(thisWinner === 2){
-            wizard.render(350, 100, 90,120)
+            duke.render(350, 100, 90,120)
            }else if(thisWinner === 3){
             console.log("IT was a tie")
            }else{
@@ -162,7 +178,7 @@ function playFunc(){
             if(thisWinner === 1){
                 frostGiant.render(350, 100, 90,120)
                }else if(thisWinner === 2){
-                wizard.render(350, 100, 90,120)
+                duke.render(350, 100, 90,120)
                }else if(thisWinner === 3){
                 console.log("IT was a tie")
                }else{
@@ -174,7 +190,7 @@ function playFunc(){
            if(thisWinner === 1){
             fireFox.render(350, 100, 90,120)
            }else if(thisWinner === 2){
-            wizard.render(350, 100, 90,120)
+            duke.render(350, 100, 90,120)
            }else if(thisWinner === 3){
             console.log("IT was a tie")
            }else{
@@ -186,7 +202,7 @@ function playFunc(){
            if(thisWinner === 1){
             theSwarm.render(350, 100, 90,120)
            }else if(thisWinner === 2){
-            wizard.render(350, 100, 90,120)
+            duke.render(350, 100, 90,120)
            }else if(thisWinner === 3){
             console.log("IT was a tie")
            }else{
@@ -198,7 +214,7 @@ function playFunc(){
            if(thisWinner === 1){
             Alien.render(350, 100, 90,120)
            }else if(thisWinner === 2){
-            wizard.render(350, 100, 90,120)
+            duke.render(350, 100, 90,120)
            }else if(thisWinner === 3){
             console.log("IT was a tie")
            }else{
@@ -210,7 +226,7 @@ function playFunc(){
            if(thisWinner === 1){
             Bear.render(350, 100, 90,120)
            }else if(thisWinner === 2){
-            wizard.render(350, 100, 90,120)
+            duke.render(350, 100, 90,120)
            }else if(thisWinner === 3){
             console.log("IT was a tie")
            }else{
