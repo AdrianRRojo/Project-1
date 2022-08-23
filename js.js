@@ -19,7 +19,8 @@ const cardTwo = document.querySelector('#cardTwo')
 const cardThree = document.querySelector('#cardThree')
 const cardFour = document.querySelector('#cardFour')
 const cardFive = document.querySelector('#cardFive')
-
+const playerBoard = document.querySelector('#playerCounter')
+const aiBoard = document.querySelector('#aiCounter')
 
 const ctx = canvas.getContext('2d')
 canvas.setAttribute('height', getComputedStyle(canvas)['height'])
@@ -89,16 +90,16 @@ const Bear = new Cards(getRandomInt(25), "Lich", "Magic", 'brown', "card")
 const Rat = new Cards(getRandomInt(5), "Rat", "Melee", 'goldenRod', "card")
 
 
-let monstersLvls = getRandomInt2(25)
-let thislvl = getRandomInt(25)
+// let monstersLvls = getRandomInt2(25)
+// let thislvl = getRandomInt(25)
 
-if(this.lvl > monstersLvls){
-    console('you won'  + thislvl + " hero level "+ "monster " + monstersLvls )
-}else if (this.lvl < monstersLvls){
-    console('you lost'  + thislvl + " hero level "+ "monster lvl" + monstersLvls )
-}else{
-    console.log('tie ' + thislvl + " hero level "+ "monster lvl" + monstersLvls )
-}
+// if(this.lvl > monstersLvls){
+//     console('you won'  + thislvl + " hero level "+ "monster " + monstersLvls )
+// }else if (this.lvl < monstersLvls){
+//     console('you lost'  + thislvl + " hero level "+ "monster lvl" + monstersLvls )
+// }else{
+//     console.log('tie ' + thislvl + " hero level "+ "monster lvl" + monstersLvls )
+// }
 
 // .render(550,100,90,120)
 
@@ -111,20 +112,26 @@ const winner = function(){
     if (monstersLvls > thislvl ){
         turn = 1;
         AICounter++
+        aiBoard.innerText = "Computer: " + AICounter
         console.log("You lose! " + thislvl + " <- hero monster -> " + monstersLvls)
         console.log(AICounter + "<- AICounter PlayerCounter ->" + playerCounter)
         thisWinner = 1
+       
     }else if(thislvl> monstersLvls){
         turn = 1;
         playerCounter++ 
+        playerBoard.innerText = "Player: " + playerCounter
         console.log("You Win!" + thislvl + " <- hero monster -> " + monstersLvls)
         console.log(AICounter + "<- AICounter PlayerCounter ->" + playerCounter)
         thisWinner = 2
+
     }else if(thislvl = monstersLvls){
         turn = 1;
         ("TIE"+ thislvl+  " <- hero monster -> " + monstersLvls)
         console.log(AICounter + "<- AICounter PlayerCounter ->" + playerCounter)
          thisWinner = 3
+         aiBoard.innerText = "Computer: " + AICounter
+         playerBoard.innerText = "Player: " + playerCounter
 
     }
 }
@@ -295,8 +302,6 @@ function playFunc(){
                 }
             }
       }     
-
-
  function playFunc3(){
     if(turn === 1){
         dragon.render(150,100,90,120)

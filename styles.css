@@ -97,3 +97,19 @@ html,body {
   bottom: 36.5vh;
   left: 61vw;
 }
+
+#Scoreboard{
+  position: absolute;
+  bottom: 29%;
+  right: 48%;
+}
+#playerCounter{
+  position: absolute;
+  bottom: 26%;
+  right:48%
+}
+#aiCounter{
+  position: absolute;
+  bottom: 23%;
+  right:48%
+}
