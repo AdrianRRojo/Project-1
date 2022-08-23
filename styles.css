@@ -74,26 +74,26 @@ html,body {
 
 #cardOne{
   position: absolute;
-  bottom: 40vh;
-  left: 28vw;
+  bottom: 36.5vh;
+  left: 34vw;
 }
 #cardTwo{
   position: absolute;
-  bottom: 40vh;
-  left: 38vw;
+  bottom: 36.5vh;
+  left: 41vw;
 }
 #cardThree{
   position: absolute;
-  bottom: 40vh;
+  bottom: 36.5vh;
   left: 48vw;
 }
 #cardFour{
   position: absolute;
-  bottom: 40vh;
-  left: 58vw;
+  bottom: 36.5vh;
+  left: 54vw;
 }
 #cardFive{
   position: absolute;
-  bottom: 40vh;
-  left: 68vw;
+  bottom: 36.5vh;
+  left: 61vw;
 }
