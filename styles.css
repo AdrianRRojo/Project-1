@@ -67,8 +67,9 @@ html,body {
 
 #Instructions{
     position: relative;
-    right: 35vw;
+    right: 38.5vw;
     bottom: 50vh;
+    font-size: small;
 }
 
 
@@ -113,18 +114,135 @@ html,body {
   bottom: 23%;
   right:48%
 }
-/* #kingDuke{
+#kingDuke1{
   position: absolute;
   left: 32.3vw;
   bottom: 42.8vh;
   height: 16.3%;
   width: 7.2%;
- } */
+ }
 
-#kingDuke{
+ #daisy1{
+  position: absolute;
+  left: 39.3vw;
+  bottom: 42.8vh;
+  height: 16.3%;
+  width: 7.2%;
+ }
+ #zoey1{
+  position: absolute;
+  left: 46.3vw;
+  bottom: 42.8vh;
+  height: 16.3%;
+  width: 7.2%;
+ }
+ #wriggly1{
+  position: absolute;
+  left: 53.3vw;
+  bottom: 42.8vh;
+  height: 16.3%;
+  width: 7.2%;
+ }
+ #traveler1{
+  position: absolute;
+  left: 60.3vw;
+  bottom: 42.8vh;
+  height: 16.3%;
+  width: 7.2%;
+ }
+ 
+
+ .win{
+  position: relative;
+  right: 9vw;
+  bottom: 3vh;
+  width: 7vw
+
+}
+ .won{
+  position: absolute;
+  left: 46.3vw;
+  bottom: 62.8vh;
+  height: 14.3%;
+  width: 7.2%;
+ }
+.place{
  position: absolute;
  left: 32.3vw;
  bottom: 62.8vh;
  height: 14.3%;
  width: 7.2%;
 }
+
+#kingDuke2{
+  display: none;
+}
+#daisy2{
+  display: none;
+}
+#zoey2{
+  display: none;
+}
+#wriggly2{
+  display: none;
+}
+#traveler2{
+  display: none;
+}
+
+
+#hunter2{
+  display: none;
+}
+#heratic2{
+  display: none;
+}
+#skeleton2{
+  display: none;
+}
+#knight2{
+  display: none;
+}
+#mushroom2{
+  display: none;
+}
+
+#kingDuke3{
+  display: none;
+}
+#daisy3{
+  display: none;
+}
+#zoey3{
+  display: none;
+}
+#wriggly3{
+  display: none;
+}
+#traveler3{
+  display: none;
+}
+
+
+
+ .Monsters{
+  position: absolute;
+  left: 60vw;
+  bottom: 62.8vh;
+ }
+
+ #heratic{
+  display: none;
+ }
+ #skeleton{
+  display: none;
+ }
+ #mushroom{
+  display: none;
+ }
+ #knight{
+  display: none;
+ }
+ #hunter{
+  display: none;
+ }
