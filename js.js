@@ -114,6 +114,22 @@ const winner = function(){
          playerBoard.innerText = "Player: " + playerCounter
 
     }
+    if(playerCounter === 3 || AICounter === 3){
+        cardOne.disabled = true
+        cardTwo.disabled = true
+        cardThree.disabled = true
+        cardFour.disabled = true
+        cardFive.disabled = true
+    }
+    if(playerCounter === 3){
+        let winner = document.getElementById('winner')
+        winner.style.display = 'block'
+        winner.innerText = "YOU WIN!"
+    }else if(AICounter ===3){
+        let winner = document.getElementById('winner')
+        winner.style.display = 'block'
+        winner.innerText = " YOU LOSE"
+    }
 }
 turn = 1;
 function playFunc(){
