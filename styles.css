@@ -14,14 +14,21 @@ canvas{
   display: block;
 }
 #start{
-  display: none;
+
   position: absolute;
   bottom: 50%;
   right: 38%;
   width: 25%;
   height: 5%;
 }
-
+#reset{
+  display: none;
+  position: absolute;
+  bottom: 40%;
+  right: 38%;
+  width: 25%;
+  height: 5%;
+}
 #Score{
   position: absolute;
   color: aqua;
@@ -37,7 +44,20 @@ canvas{
   color: aqua;
   top: 50%;
 }
-
+#topPart{
+  position: absolute;
+  color: aqua;
+  right: 45%;
+  top: 1%;
+}
+#instructions{
+  
+  position: absolute;
+  color: aqua;
+  right: 25%;
+  top: 1%;
+  word-wrap: break-word;
+}
 
 
 
