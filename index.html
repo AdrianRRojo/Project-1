@@ -4,112 +4,26 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
+        <title>Duel or no Duel</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="styles.css">
+        <link href="https://fonts.googleapis.com/css2?family=Yatra+One&display=swap" rel="stylesheet">
     </head>
     <body>
-         <!-- the container of the code aka where the game will be played. -->
-        <div id="container">
-            <aside id="top-left"><h2>DUEL OR NO DUEL</h2></aside>
-            <aside id="top-right"><h2 id="Scoreboard"></h2></aside>
-            <main>
-                <canvas id="canvas"><!-- play it, a game --></canvas>
-            </main>
-            <aside id="btm-right"><h2 id="status"></h2></aside>
-          </div>
-          <button id = "cardOne" onclick= "playFunc()">
-           Card 1 
-          </button>
-
-          <button id = "cardTwo" onclick= "playFunc2()">
-           Card 2 
-          </button>
-
-          <button id = "cardThree" onclick= "playFunc3()">
-           Card 3 
-          </button>
-
-          <button id = "cardFour" onclick= "playFunc4()">
-           Card 4 
-          </button>
-
-          <button id = "cardFive" onclick= "playFunc5()">
-           Card 5 
-          </button>
-           <!-- basic rules of the game, can be added too when implementing stretch goals. --> 
-           <div id = "Instructions">HOW TO PLAY
-            <br>
-            <br>
-            <br>
-            YOU I WLL BE HANDED A DECK OF 5 CARDS
-            <br>
-            <br>
-            <br>
-            EACH CARD VARIES IN POWER LEVEL
-            <br>
-            <br>
-            <br>
-            TAKE YOUR DECK TO BATTLE 
-            <br>
-            <br>
-            <br>
-            AND LET THE BEST PLAYER WIN
-            <br>
-        </div> 
-        <div id = "Scoreboard">
-            Scoreboard:
-            <br>
-            </div>
-
-            <div id="playerCounter">
-            Player: 
-            <br>
-            </div>
-
-            <div id = "aiCounter">
-            Computer:
-            </div>
-        </div>
-        <div class = "Monsters">
-            <img id = "hunter" alt = "hunter card image" src = "Monsters/hunter.png"/>
-            <img class = 'win' id = "hunter2" alt = "hunter card image" src = "Monsters/hunter.png"/>
-            <img id = "heratic" alt = "heratic" src = "Monsters/heratic.png"/>
-            <img class = 'win'id = "heratic2" alt = "heratic" src = "Monsters/heratic.png"/>
-            <img id = "skeleton" alt = "skeleton" src = "Monsters/skele.png"/>
-            <img class = 'win'id = "skeleton2" alt = "skeleton" src = "Monsters/skele.png"/>
-            <img id = "mushroom" alt = "mushroom" src = "Monsters/mushroom.png"/>
-            <img class = 'win'id = "mushroom2" alt = "mushroom" src = "Monsters/mushroom.png"/>
-            <img id = "knight" alt="Evil knight" src = "Monsters/knight.png"/>
-            <img class = 'win'id = "knight2" alt="Evil knight" src = "Monsters/knight.png"/>
-            </div>
-        
-            <img id = "kingDuke1" alt = "King Duke card image" src = "Hero Cards/KingDuke.png"/>
-            <img class = 'place' id = "kingDuke2" alt = "King Duke card image" src = "Hero Cards/KingDuke.png"/>
-            <img class = 'won' id = "kingDuke3" alt = "King Duke card image" src = "Hero Cards/KingDuke.png"/>
-
-            <img id = "daisy1" alt = "daisy the cat" src = "Hero Cards/daisy.png"/>
-            <img class = 'place' id = "daisy2" alt = "daisy the cat" src = "Hero Cards/daisy.png"/>
-            <img class = 'won' id = "daisy3" alt = "daisy the cat" src = "Hero Cards/daisy.png"/>
-
-            <img id = "zoey1" alt = "zoey the dog" src = "Hero Cards/zoey.png"/>
-            <img class = 'place' id = "zoey2" alt = "zoey the dog" src = "Hero Cards/zoey.png"/>
-            <img class = 'won'id = "zoey3" alt = "zoey the dog" src = "Hero Cards/zoey.png"/>
-
-            <img id = "traveler1" alt = "traveler" src = "Hero Cards/traveler.png"/>
-            <img class = 'place' id = "traveler2" alt = "traveler" src = "Hero Cards/traveler.png"/>
-            <img class = 'won' id = "traveler3" alt = "traveler" src = "Hero Cards/traveler.png"/>
-
-            <img id = "wriggly1" alt = "wriggly" src = "Hero Cards/wriggly.png"/>
-            <img class = 'place' id = "wriggly2" alt = "wriggly" src = "Hero Cards/wriggly.png"/>
-            <img class = 'won' id = "wriggly3" alt = "wriggly" src = "Hero Cards/wriggly.png"/>
+       <canvas id ="gameCanvas" width="800" height="1000"></canvas>
+        <div id = "Score">SCOREBOARD: </div>
+        <div id = "pScore">Player: </div>
+        <div id = "aiScore"> Computer:</div>
+       <button id = "start"> START</button>
+       <button id = "btnOne"> Card 1</button>
+       <button id = "btnTwo"> Card 2</button>
+       <button id = "btnThree">Card 3</button>
+       <button id = "btnFour"> Card 4</button>
+       <button id = "btnFive"> Card 5</button>
+       <button id = "btnSix">  Card 6</button>
 
 
-
-            <div Id = "winner">
-               
-            </div>
         <script src="js.js" async defer></script>
     </body>
 </html>
