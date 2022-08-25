@@ -1,7 +1,6 @@
 # Project-1
-# Link
+# https://adrianrrojo.github.io/Project-1/
 ---
-https://adrianrrojo.github.io/Project-1/
 
 # Duel or no Duel 
 ### get it like deal or no deal? 
