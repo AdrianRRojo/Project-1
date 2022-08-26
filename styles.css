@@ -60,35 +60,48 @@ canvas{
 }
 
 
-
+#monsterLvls{
+  position: absolute;
+  right: 26vw;
+  top: 42vh;
+  color: crimson;
+  font-size: small;
+}
+#playerLvl{
+  position: absolute;
+  right: 65vw;
+  top: 58vh;
+  color: aqua;
+  font-size: small;
+}
 
 #btnOne{
-  position: absolute;
-  left: 30vh;
-  bottom: -3%;
+  position: relative;
+  left: 11vw;
+  bottom: 35vh;
 }
 #btnTwo{   
-  position: absolute;
-  left: 43vh;
-  bottom: -3%;
+  position: relative;
+  left: 19vw;
+  bottom: 35vh;
 } 
 #btnThree{ 
-  position: absolute;  
-  left: 56vh;
-  bottom: -3%;
+  position: relative;  
+  left: 27vw;
+  bottom: 35vh;
 } 
 #btnFour{   
-  position: absolute;
-  bottom: -3%;
-  left: 69vh;
+  position: relative;
+  bottom: 35vh;
+  left: 35vw;
 } 
 #btnFive{  
-  position: absolute;
-  bottom: -3%;
-  left: 82vh;
+  position: relative;
+  bottom: 35vh;
+  left: 43vw;
 }  
 #btnSix{    
-  position: absolute;
-  bottom: -3%;
-  left: 95vh;
+  position: relative;
+  bottom: 35vh;
+  left: 51vw;
 }

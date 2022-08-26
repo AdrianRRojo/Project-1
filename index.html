@@ -11,7 +11,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Yatra+One&display=swap" rel="stylesheet">
     </head>
     <body>
-       <canvas id ="gameCanvas" width="800" height="1000"></canvas>
+       <canvas id ="gameCanvas" width="800" height="800"></canvas>
         <div id = "Score">SCOREBOARD: </div>
         <div id = "pScore">Player: </div>
         <div id = "aiScore"> Computer:</div>
@@ -23,7 +23,7 @@
        <button id = "btnFour"> Card 4</button>
        <button id = "btnFive"> Card 5</button>
        <button id = "btnSix">  Card 6</button>
-        <div id = 'topPart'>Instructions:</div>
+        <div id = "topPart">Instructions:</div>
         <div id = "instructions">
             <br>
             You will recieve a deck of 6 random cards
@@ -31,8 +31,12 @@
             Each card starts at Level 1
             <br>
             the more the card ones the higher level they become!
+            <br> First to 4 Wins!
 
         </div>
+
+        <div id = 'monsterLvls'></div>
+        <div id = 'playerLvl'> </div>
 
         <script src="js.js" async defer></script>
     </body>
