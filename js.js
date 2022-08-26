@@ -2,7 +2,7 @@ const canvas = document.getElementById('gameCanvas')
 const ctx = canvas.getContext('2d')
 canvas.setAttribute('height', getComputedStyle(canvas)['height'])
 canvas.setAttribute('width', getComputedStyle(canvas)['width'])
-
+//x = to reset button
 let x = document.querySelector('#reset')
 
 // win counter function
@@ -19,7 +19,6 @@ function getRandomInt(max) {
   let newlvl = getRandomInt(2)
 
 // card constructor that will be used to generate cards for both the user and the AI
-
 class Cards{ 
     constructor(name,lvl,imagePath,x,y,w,h){
         this.name = name
@@ -46,7 +45,7 @@ let hero = ['duke',
     'wriggly',
     'cassie',
 ]
-
+//array of monsters names to be played
  let monsters = ['heratic',
      'hunter',
      'knight',
@@ -54,7 +53,7 @@ let hero = ['duke',
      'skeleton'
 ]
 
-
+// picks a card to play at random
 let monsterCardPick = function(){
     let aiSelector = monsters[Math.floor(Math.random() * monsters.length)]
     
@@ -82,7 +81,7 @@ let monsterCardPick = function(){
                document.getElementById("monsterLvls").innerText = "LEVEL: " + newlvl
             }
         }
-
+// winner  and loser function
 const winner = function(btnName,pickedCard){
             monsterCardPick()
             if (pickedCard.lvl < newlvl){
@@ -140,7 +139,7 @@ const winner = function(btnName,pickedCard){
         
         
         }
-
+//picked cards are moved to the center of the screen
 let playing = (btnName,pickedCard) =>{
     btnName.addEventListener('click', function(){
       if(pickedCard === 'duke'){
@@ -177,10 +176,7 @@ let playing = (btnName,pickedCard) =>{
     })
     
 }
-
-//update array to be strings
-// make the deck 
-// constructor(name, lvl,imagePath,x,y,w,h){
+//creates a deck of random cards
 playedCard = () => {
     start.disabled = true
     start.style.display = 'none';
@@ -291,25 +287,9 @@ playedCard = () => {
         }
 
 
-
-
+// deployed at the end of the game and restarts the game.
 reset = () => {location.reload();}
 
-
-
-//ideas
-/*attach cards to a button
-when that button is pressed move card to the canvas
-if your card wins move towards the middle
-
-*/
-
-// console.log(duke,zoey,daisy,wriggly,cassie) checking to see if each card recieved each property correctly
-
-// zoey.render(50,50,50,50)
-// daisy.render(40,350,50,50)           verifying each card can render properly
-// wriggly.render(150,150,50,50) 
-// cassie.render(12,213,50,50)
 
 
 
