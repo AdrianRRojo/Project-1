@@ -143,31 +143,31 @@ const winner = function(btnName,pickedCard){
 let playing = (btnName,pickedCard) =>{
     btnName.addEventListener('click', function(){
       if(pickedCard === 'duke'){
-        const duke = new Cards('duke',1,"./HeroCards/KingDuke.png",190,300,125,150)
+        const duke = new Cards('duke',3,"./HeroCards/KingDuke.png",190,300,125,150)
         document.getElementById("playerLvl").innerText = "LEVEL: " + duke.lvl
         setTimeout(() => { 
         winner(btnName, duke)
     }, '4000')
       }else if(pickedCard === 'zoey'){
-        const zoey = new Cards('zoey', 1,"./HeroCards/zoey.png", 190,300,125,150)
+        const zoey = new Cards('zoey', 3,"./HeroCards/zoey.png", 190,300,125,150)
         document.getElementById("playerLvl").innerText = "LEVEL: " + zoey.lvl
         setTimeout(() => {
             winner(btnName, zoey)
         }, '4000')
       }else if(pickedCard === 'daisy'){
-        const daisy = new Cards('daisy',1, "./HeroCards/daisy.png",190,300,125,150)
+        const daisy = new Cards('daisy',4, "./HeroCards/daisy.png",190,300,125,150)
         document.getElementById("playerLvl").innerText = "LEVEL: " + daisy.lvl
         setTimeout(() => { 
         winner(btnName,daisy)
     }, '4000')
       }else if(pickedCard === 'wriggly'){
-        const wriggly = new Cards('wriggly', 1, "./HeroCards/wriggly.png",190,300,125,150)
+        const wriggly = new Cards('wriggly', .5, "./HeroCards/wriggly.png",190,300,125,150)
         document.getElementById("playerLvl").innerText = "LEVEL: " + wriggly.lvl
         setTimeout(() => {
         winner(btnName,wriggly)
     }, '4000')
       }else if(pickedCard === 'cassie'){
-        const cassie = new Cards('cassie',1, "./HeroCards/traveler.png",190,300,125,150)
+        const cassie = new Cards('cassie',2.5, "./HeroCards/traveler.png",190,300,125,150)
         document.getElementById("playerLvl").innerText = "LEVEL: " + cassie.lvl
         setTimeout(() => {
         winner(btnName,cassie)
@@ -184,102 +184,102 @@ playedCard = () => {
         let heroSelector = hero[Math.floor(Math.random() * hero.length)]
         if (heroSelector === 'duke'){
             if(i === 0){
-               const duke = new Cards('duke','1',"./HeroCards/KingDuke.png",50,600,125,150)
+               const duke = new Cards('duke',2,"./HeroCards/KingDuke.png",50,600,125,150)
                 playing(btnOne, 'duke')
             }else if(i === 1){
-              const duke = new Cards('duke','1',"./HeroCards/KingDuke.png", 175,600,125,150)
+              const duke = new Cards('duke',2,"./HeroCards/KingDuke.png", 175,600,125,150)
                 playing(btnTwo, 'duke')
             }else if(i === 2){
-                const duke = new Cards('duke','1',"./HeroCards/KingDuke.png", 300,600,125,150)
+                const duke = new Cards('duke',2,"./HeroCards/KingDuke.png", 300,600,125,150)
                 playing(btnThree, 'duke')
             }else if(i === 3){
-                const duke = new Cards('duke','1',"./HeroCards/KingDuke.png", 425,600,125,150)
+                const duke = new Cards('duke',2,"./HeroCards/KingDuke.png", 425,600,125,150)
                 playing(btnFour, 'duke')
             }else if(i === 4){
-                const duke = new Cards('duke','1',"./HeroCards/KingDuke.png", 550,600,125,150)
+                const duke = new Cards('duke',1.5,"./HeroCards/KingDuke.png", 550,600,125,150)
                 playing(btnFive, 'duke')
             }else if(i === 5){
-                const duke = new Cards('duke','1',"./HeroCards/KingDuke.png", 675,600,125,150)
+                const duke = new Cards('duke',2,"./HeroCards/KingDuke.png", 675,600,125,150)
                 playing(btnSix, 'duke')
             }
     }else if(heroSelector === 'zoey'){
             if(i === 0){
-                const zoey = new Cards('zoey', '1',"./HeroCards/zoey.png", 50,600,125,150)
+                const zoey = new Cards('zoey', .5,"./HeroCards/zoey.png", 50,600,125,150)
                 playing(btnOne, 'zoey')
             }else if(i === 1){
-                const zoey = new Cards('zoey', '1',"./HeroCards/zoey.png", 175,600,125,150)
+                const zoey = new Cards('zoey', 1,"./HeroCards/zoey.png", 175,600,125,150)
                 playing(btnTwo, 'zoey')
             }else if(i === 2){
-                const zoey = new Cards('zoey', '1',"./HeroCards/zoey.png", 300,600,125,150)
+                const zoey = new Cards('zoey', 2,"./HeroCards/zoey.png", 300,600,125,150)
                 playing(btnThree, 'zoey')
             }else if(i === 3){
-                const zoey = new Cards('zoey', '1',"./HeroCards/zoey.png", 425,600,125,150)
+                const zoey = new Cards('zoey', 2,"./HeroCards/zoey.png", 425,600,125,150)
                 playing(btnFour, 'zoey')
             }else if(i === 4){
-                const zoey = new Cards('zoey', '1',"./HeroCards/zoey.png", 550,600,125,150)
+                const zoey = new Cards('zoey', 2,"./HeroCards/zoey.png", 550,600,125,150)
                 playing(btnFive, 'zoey')
             }else if(i === 5){
-                const zoey = new Cards('zoey', '1',"./HeroCards/zoey.png", 675,600,125,150)
+                const zoey = new Cards('zoey', 2,"./HeroCards/zoey.png", 675,600,125,150)
                 playing(btnSix, 'zoey')
         }
     }else if(heroSelector === 'daisy'){
         if(i === 0){
-                const daisy = new Cards('daisy','1', "./HeroCards/daisy.png",50,600,125,150)
+                const daisy = new Cards('daisy',2, "./HeroCards/daisy.png",50,600,125,150)
                 playing(btnOne, 'daisy')
             }else if(i === 1){
-                const daisy = new Cards('daisy','1', "./HeroCards/daisy.png",175,600,125,150)
+                const daisy = new Cards('daisy',2, "./HeroCards/daisy.png",175,600,125,150)
                 playing(btnTwo, 'daisy')
             }else if(i === 2){
-                const daisy = new Cards('daisy','1', "./HeroCards/daisy.png",300,600,125,150)
+                const daisy = new Cards('daisy',2, "./HeroCards/daisy.png",300,600,125,150)
                 playing(btnThree, 'daisy')
             }else if(i === 3){
-                const daisy = new Cards('daisy','1', "./HeroCards/daisy.png",425,600,125,150)
+                const daisy = new Cards('daisy',2, "./HeroCards/daisy.png",425,600,125,150)
                 playing(btnFour, 'daisy')
             }else if(i === 4){
-                const daisy = new Cards('daisy','1', "./HeroCards/daisy.png",550,600,125,150)
+                const daisy = new Cards('daisy',2, "./HeroCards/daisy.png",550,600,125,150)
                 playing(btnFive, 'daisy')
             }else if(i === 5){
-                const daisy = new Cards('daisy','1', "./HeroCards/daisy.png",675,600,125,150)
+                const daisy = new Cards('daisy',2, "./HeroCards/daisy.png",675,600,125,150)
                 playing(btnSix, 'daisy')
             }
     }else if(heroSelector === 'wriggly'){
         if(i === 0){
-                const wriggly = new Cards('wriggly', 1, "./HeroCards/wriggly.png",50,600,125,150)
+                const wriggly = new Cards('wriggly', 2, "./HeroCards/wriggly.png",50,600,125,150)
                 playing(btnOne, 'wriggly')
             }else if(i === 1){
-                const wriggly = new Cards('wriggly', 1, "./HeroCards/wriggly.png",175,600,125,150)
+                const wriggly = new Cards('wriggly', 2, "./HeroCards/wriggly.png",175,600,125,150)
                 playing(btnTwo, 'wriggly')
             }else if(i === 2){
-                const wriggly = new Cards('wriggly', 1, "./HeroCards/wriggly.png",300,600,125,150) 
+                const wriggly = new Cards('wriggly', 1.5, "./HeroCards/wriggly.png",300,600,125,150) 
                 playing(btnThree, 'wriggly')
             }else if(i === 3){
-                const wriggly = new Cards('wriggly', 1, "./HeroCards/wriggly.png",425,600,125,150)
+                const wriggly = new Cards('wriggly', 1.5, "./HeroCards/wriggly.png",425,600,125,150)
                 playing(btnFour, 'wriggly')
             }else if(i === 4){
-                const wriggly = new Cards('wriggly', 1, "./HeroCards/wriggly.png",550,600,125,150)
+                const wriggly = new Cards('wriggly', 2, "./HeroCards/wriggly.png",550,600,125,150)
                 playing(btnFive, 'wriggly')
             }else if(i === 5){
-                const wriggly = new Cards('wriggly', 1, "./HeroCards/wriggly.png",675,600,125,150)
+                const wriggly = new Cards('wriggly', 3, "./HeroCards/wriggly.png",675,600,125,150)
                 playing(btnSix, 'wriggly')
             }
     }else if(heroSelector === 'cassie'){
         if(i === 0){
-                const cassie = new Cards('cassie',1, "./HeroCards/traveler.png",50,600,125,150)
+                const cassie = new Cards('cassie',2.5, "./HeroCards/traveler.png",50,600,125,150)
                 playing(btnOne, 'cassie')
             }else if(i === 1){
-                const cassie = new Cards('cassie',1, "./HeroCards/traveler.png",175,600,125,150) 
+                const cassie = new Cards('cassie',2.5, "./HeroCards/traveler.png",175,600,125,150) 
                 playing(btnTwo, 'cassie')
             }else if(i === 2){
-                const cassie = new Cards('cassie',1, "./HeroCards/traveler.png",300,600,125,150)
+                const cassie = new Cards('cassie',2.5, "./HeroCards/traveler.png",300,600,125,150)
                 playing(btnThree, 'cassie')
             }else if(i === 3){
-                const cassie = new Cards('cassie',1, "./HeroCards/traveler.png",425,600,125,150)
+                const cassie = new Cards('cassie',2.5, "./HeroCards/traveler.png",425,600,125,150)
                 playing(btnFour, 'cassie')
             }else if(i === 4){
-                const cassie = new Cards('cassie',1, "./HeroCards/traveler.png",550,600,125,150)
+                const cassie = new Cards('cassie',2.5, "./HeroCards/traveler.png",550,600,125,150)
                 playing(btnFive, 'cassie')
             }else if(i === 5){
-                const cassie = new Cards('cassie',1, "./HeroCards/traveler.png",675,600,125,150)
+                const cassie = new Cards('cassie',2.5, "./HeroCards/traveler.png",675,600,125,150)
                 playing(btnSix, 'cassie')
             }
         }
@@ -288,7 +288,22 @@ playedCard = () => {
 
 
 // deployed at the end of the game and restarts the game.
-reset = () => {location.reload();}
+reset = () => {
+    x.style.display = 'none';
+    btnOne.disabled = false
+    btnTwo.disabled = false
+    btnThree.disabled = false
+    btnFour.disabled = false
+    btnFive.disabled = false
+    btnSix.disabled = false
+    let playerCounter = 0;
+    let AICounter = 0;
+    pScore.innerText = "PLAYER: " + playerCounter 
+    aiScore.innerText =" Computer: " + AICounter
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    document.getElementById("monsterLvls").innerText = " "
+    document.getElementById("playerLvl").innerText = " "
+}
 
 
 
